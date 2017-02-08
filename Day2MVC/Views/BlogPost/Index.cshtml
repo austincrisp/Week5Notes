@@ -21,14 +21,9 @@
 @foreach (var blogPost in ViewBag.AllBlogPosts)
 {
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-6">
+            @Html.ActionLink((string)blogPost.Title, "Details", new { id = blogPost.Id })
             @blogPost.Title
-        </div>
-        <div class="col-md-8">
-            @blogPost.Body
-        </div>
-        <div class="col-md-2">
-            @blogPost.Created
         </div>
     </div>
     <ul>
